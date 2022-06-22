@@ -4,16 +4,15 @@
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
     <b-row class="mt-3" v-else>
-      <b-col
-        md="6"
-        sm="12"
-        xs="12"
-        class="mb-5"
-        v-for="(n, index) in data"
-        :key="index"
-      >
-        <ManagementTeamCard :data="n" />
+      <h1 class="text-center py-3">Team Management</h1>
+
+      <b-col md="2" sm="12" xs="12" class="mb-1" v-for="(n, index) in data" :key="index">
+        <ManagementTeamCard :data="n"/>
       </b-col>
+      <div :class="'details px-5'">
+        <h5 class="">{{ data[0].name }}</h5>
+        <h5 class="">{{ data[0].designation }}</h5>
+      </div>
     </b-row>
   </b-container>
 </template>
@@ -29,7 +28,22 @@ export default {
       load: true,
       data: [
         {
+          name: "Junaid",
+          designation: "Managing Director",
+          image: "./assets/images/team/1.png",
+        },
+        {
           name: "Mohamed Rizvi",
+          designation: "Managing Director",
+          image: "https://i.imgur.com/8RKXAIV.jpg",
+        },
+        {
+          name: "Muhammad Hassnain",
+          designation: "Managing Director",
+          image: "https://i.imgur.com/8RKXAIV.jpg",
+        },
+        {
+          name: "Haseebullah",
           designation: "Managing Director",
           image: "https://i.imgur.com/8RKXAIV.jpg",
         },
@@ -42,34 +56,19 @@ export default {
           name: "Mohamed Rizvi",
           designation: "Managing Director",
           image: "https://i.imgur.com/8RKXAIV.jpg",
-        },
-        {
-          name: "Mohamed Rizvi",
-          designation: "Managing Director",
-          image: "https://i.imgur.com/8RKXAIV.jpg",
-        },
-        {
-          name: "Mohamed Rizvi",
-          designation: "Managing Director",
-          image: "https://i.imgur.com/8RKXAIV.jpg",
-        },
-        {
-          name: "Mohamed Rizvi",
-          designation: "Managing Director",
-          image: "https://i.imgur.com/8RKXAIV.jpg",
-        },
-        {
-          name: "Mohamed Rizvi",
-          designation: "Managing Director",
-          image: "https://i.imgur.com/8RKXAIV.jpg",
-        },
-        {
-          name: "Mohamed Rizvi",
-          designation: "Managing Director",
-          image: "https://i.imgur.com/8RKXAIV.jpg",
-        },
+        }
       ],
     };
+  },
+  methods: {
+    hoverMe(n){
+      this.name = this.data[n].name;
+      this.designation = this.data[n].designation;
+    },
+    clickMe(index){
+      console.log(index);
+      console.log(this.data[index].name);
+    }
   },
   created() {
     axios
@@ -87,3 +86,17 @@ export default {
   },
 };
 </script>
+<style>
+.app {
+    background-color: white;
+    /* background-color: #f4f4f4; */
+}
+.details{
+  background-color: #f4f4f4;
+  border-radius: 5%;
+  display: none;
+}
+.display_details{
+  display: block !important;
+}
+</style>

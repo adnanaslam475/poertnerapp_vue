@@ -1,0 +1,20 @@
+.our_story{
+    color: white;
+    position: absolute;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 100%;
+}
+.cover_image{
+    
+}
+.equal-height-columns{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.equal-column-content{
+    height: 100%;
+}

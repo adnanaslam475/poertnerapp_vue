@@ -1,5 +1,5 @@
 <template>
-  <div class="card rounded custom-round px-2">
+  <div class="card rounded custom-round px-2" :style="{height:height,objectFit:object_fit}">
     <div class="card-body">
       <div class="text-start">
         <b-icon
@@ -23,6 +23,8 @@
       text: String,
       heading: String,
       icon: String,
+      height: { type: String, default: "" },
+      object_fit: { type: String, default: "" },
     },
   }
 </script>

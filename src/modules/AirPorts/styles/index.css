@@ -1,0 +1,144 @@
+
+.image{
+    position: relative;
+}
+.centered {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    display: none;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+
+    left: 0;
+    top: 30px;
+    width: 100%
+  }
+  .sidebar{
+    background: transparent;
+  }
+  .app{
+    background-color: var(--bs-body-bg);
+  }
+  .flex-row {
+    background-color: #f4f4f4;
+  }
+  .grad {
+    background-image: linear-gradient(#ebd8c6, #dddfdf);
+  }
+  
+  .main-container-bg {
+    height: fit-content;
+    width: fit-content;
+    /* background-color: blue; */
+  }
+  
+  i {
+    color: grey;
+    font-size: 30px;
+  }
+  
+  p {
+    color: grey;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  a {
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+    /* background-color: aqua; */
+  }
+  
+  a:hover {
+    cursor: pointer;
+  }
+  
+  a:hover .icon-container {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #b39032;
+  }
+  
+  a:hover .centered{
+    display: block;
+  }
+  
+  a:hover i {
+    color: white;
+  }
+  
+  a:hover p {
+    color: black;
+  }
+  
+  .active-class {
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+  }
+  
+  .active-class .icon-container {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #b39032;
+  }
+  
+  .active-class i {
+    color: white;
+  }
+  
+  .active-class p {
+    color: black;
+  }
+  
+  .icon-container {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .btn-container {
+    width: 180px;
+    color: white;
+    background-color: #b39032;
+  }
+  .topBottomRadius {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-left: 2%;
+    /* padding-right: 1%; */
+  }
+  
+  .text-capitalize {
+    font-size: 13px;
+    /* color: transparent; */
+    padding-left: 5%;
+    max-width: 150px;
+  }
+  
+  .img-class { 
+    position: relative;
+    border-radius: 1rem;
+
+  }
+  
+  
+  .background-repeater-custom {
+    /* background-repeat: repeat-x repeat-y;
+    background: url("../../../assets/background.jpeg"); */
+  }
+  
+  .nav-scroll {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .nav-scroll ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }

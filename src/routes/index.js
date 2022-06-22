@@ -9,31 +9,47 @@ import CommercialRoutes from "../modules/Commercial/route"
 import PagesRoutes from "../modules/pages/route"
 
 // import Navbar from "../components/navBar/navbar.vue"
-import verticalNavbar from "../components/navBar/verticalNavbar.vue"
+// import verticalNavbar from "../components/navBar/verticalNavbar.vue"
+import Home from '../modules/pages/pages/index.vue'
+import Team from "../modules/Team/index.vue"
 
 Vue.use(VueRouter)
 
 console.log(...PagesRoutes)
 const staticRoutes = [
+  {
+    path: "/",
+    name: "home",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "team",
+    component: Team
+  },
+  // {
+  //   path: "/team",
+  //   name: "team",
+  //   component: Team,
+  // },
+  ...PagesRoutes,
+  ...ourStoryRoutes,
+  ...CommercialRoutes,
+  ...PhilosophiesRoutes,
+  ...LeadershipRoutes,
+  ...AirportsRoutes
   // {
   //   path: "/",
   //   name: "verticalNavbar",
-  //   component: Navbar,
+  //   component: verticalNavbar,
+  //   children: [
+  //     ...ourStoryRoutes,
+  //     ...CommercialRoutes,
+  //     ...PhilosophiesRoutes,
+  //     ...LeadershipRoutes,
+  //     ...AirportsRoutes,
+  //   ],
   // },
-  ...PagesRoutes,
-
-  {
-    path: "/",
-    name: "verticalNavbar",
-    component: verticalNavbar,
-    children: [
-      ...ourStoryRoutes,
-      ...CommercialRoutes,
-      ...PhilosophiesRoutes,
-      ...LeadershipRoutes,
-      ...AirportsRoutes,
-    ],
-  },
 ]
 
 const routes = staticRoutes

@@ -8,10 +8,11 @@
               rgba(0, 0, 0, 0),
               rgba(0, 0, 0, 0),
               #b39032
-            ), url(' ${url + data.image}')`,
+            ), 
+            url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')`,
       }"
+
     >
-      ...
     </div>
 
     <div class="card-body little-profile px-5">
@@ -41,6 +42,11 @@ export default {
 };
 </script>
 <style scoped>
+.hero-image{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
 .padding {
   padding: 3rem !important;
   /* margin-left: 200px; */

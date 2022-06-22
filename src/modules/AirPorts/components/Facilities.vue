@@ -1,12 +1,12 @@
 <template>
   <div class="d-flex flex-row card rounded custom-round">
     <FacilityText />
-    <b-row class="px-4 scroll">
+    <b-row class="px-4 scroll my-3">
       <b-col
         v-for="(ele, index) in data"
         :key="index"
-        class="my-1 mt-4"
-        md="6"
+        class=""
+        md="4"
         sm="12"
         xs="12"
       >
@@ -26,6 +26,9 @@ export default {
 };
 </script>
 <style scoped>
+.facilities{
+  border-radius: 5%;
+}
 .custom-round {
   border-radius: 1rem !important;
 }

@@ -1,171 +1,73 @@
 <template>
-  <v-fragment class="d-flex flex-row">
-    <div
-      class="nav d-flex flex-column grad justify-content-center align-items-center main-container-bg topBottomRadius p-5"
-    >
-      <div
-        class="nav flex-column nav-pills grad mb-3"
-        id="v-pills-tab"
-        role="tablist"
-        aria-orientation="vertical"
+  <nav
+    id="navbar"
+    class="navbar fixed-top navbar-expand-lg navbar-dark"
+    style="background: #ffffffb3;"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./logo.png" alt="" width="100" height="80" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <div
-          class="nav-item d-flex flex-column justify-content-center align-items-center"
-        >
-          <router-link
-            to="/Leadership"
-            class="d-flex flex-column justify-content-center align-items-center container-bg p-2"
-          >
-            <div>
-              <img
-                src="https://i.imgur.com/8RKXAIV.jpg"
-                width="90"
-                height="90"
-                class="img-class"
-              />
-            </div>
-            <p class="text-capitalize">Mohamed Rizvi</p>
-          </router-link>
-          <router-link
-            to="/Leadership"
-            class="d-flex flex-column justify-content-center align-items-center container-bg p-2"
-          >
-            <div>
-              <img
-                src="https://i.imgur.com/8RKXAIV.jpg"
-                width="90"
-                height="90"
-                class="img-class"
-              />
-            </div>
-            <p class="text-capitalize">Mohamed Rizvi</p>
-          </router-link>
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <router-link
-            to="/Leadership"
-            class="d-flex flex-column justify-content-center align-items-center container-bg p-2"
-          >
-            <div>
-              <img
-                src="https://i.imgur.com/8RKXAIV.jpg"
-                width="90"
-                height="90"
-                class="img-class"
-              />
-            </div>
-            <p class="text-capitalize">Mohamed Rizvi</p>
-          </router-link>
-
-          <router-link
-            to="/Leadership"
-            class="d-flex flex-column justify-content-center align-items-center container-bg p-2"
-          >
-            <div>
-              <img
-                src="https://i.imgur.com/8RKXAIV.jpg"
-                width="90"
-                height="90"
-                class="img-class"
-              />
-            </div>
-            <p class="text-capitalize">Mohamed Rizvi</p>
-          </router-link>
-
-          <!-- </router-link> -->
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/our-story'"
+              >Our Story</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/Leadership'"
+              >Our Leadership</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/management-team'"
+              >Our Management Team</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/Philosophies'"
+              >Our Philosophies</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/airports'"
+              >Airports</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/corporate'"
+              >Corporate</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/commercial'"
+              >Commercial</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-black" :to="'/contact-us'"
+              >Contact-us</router-link
+            >
+          </li>
+        </ul>
       </div>
     </div>
-    <router-view />
-  </v-fragment>
+  </nav>
 </template>
-
 <script>
-  // import NavbarElement from "./navbarElement"
-  export default {
-    name: "Navbar",
-    components: {},
-    props: {
-      name: {
-        type: String,
-      },
-
-      image: {
-        type: String,
-      },
-    },
-  }
+  export default {}
 </script>
-<style scoped>
-  .flex-row {
-    background-color: #f4f4f4;
-  }
-  .grad {
-    background-image: linear-gradient(#ebd8c6, #dddfdf);
-  }
-
-  .main-container-bg {
-    height: fit-content;
-    width: fit-content;
-    /* background-color: blue; */
-  }
-
-  i {
-    color: grey;
-    font-size: 30px;
-  }
-
-  p {
-    color: grey;
-    font-size: 10px;
-    font-weight: bold;
-  }
-  a {
-    height: fit-content;
-    width: fit-content;
-    text-decoration: none;
-    /* background-color: aqua; */
-  }
-
-  a:hover {
-    cursor: pointer;
-  }
-
-  a:hover .icon-container {
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #b39032;
-  }
-
-  a:hover i {
-    color: white;
-  }
-
-  a:hover p {
-    color: black;
-  }
-
-  .icon-container {
-    height: 50px;
-    width: 50px;
-  }
-
-  .btn-container {
-    width: 180px;
-    color: white;
-    background-color: #b39032;
-  }
-
-  .topBottomRadius {
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-
-  .text-capitalize {
-    font-size: 13px;
-    color: transparent;
-  }
-
-  .img-class {
-    border-radius: 100%;
-  }
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="card rounded custom-round px-2">
+  <div class="card rounded custom-round px-2" :style="{height:height,objectFit:object_fit}">
     <div class="card-body">
       <p class="text-start text-wrap p-font">
         The establishment of these airports have been very important to bring
@@ -18,6 +18,10 @@
 <script>
   export default {
     name: "Card1",
+    props: {
+      height: { type: String, default: "" },
+      object_fit: { type: String, default: "" },
+    },
   }
 </script>
 <style scoped>

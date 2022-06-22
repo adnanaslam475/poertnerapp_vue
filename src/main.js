@@ -1,12 +1,14 @@
 import Vue from "vue"
 import App from "./App.vue"
+
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue"
 import router from "./routes"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core"
-
+import VueScrollmagic from 'vue-scrollmagic'
+Vue.use(VueScrollmagic)
 /* import specific icons */
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons"
 import { faBook } from "@fortawesome/free-solid-svg-icons"

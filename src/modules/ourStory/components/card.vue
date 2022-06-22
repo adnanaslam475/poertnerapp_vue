@@ -1,5 +1,5 @@
 <template>
-  <div class="card rounded custom-round px-2">
+  <div class="card rounded custom-round px-2" :style="{height:height,objectFit:object_fit}">
     <div class="card-body">
       <p class="text-start text-wrap p-font">
         <b>Regional Airports Company Limited (RACL)</b> was established on the
@@ -36,6 +36,10 @@
 <script>
   export default {
     name: "Card",
+    props: {
+      height: { type: String, default: "" },
+      object_fit: { type: String, default: "" },
+    },
   }
 </script>
 <style scoped>

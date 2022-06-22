@@ -1,16 +1,9 @@
 <template>
-  <div class="card custom-round float-right border-0 shadow-sm">
-    <div class="row p-0 m-0">
-      <div class="col-4">
-        <img class="shadow-sm w-50 m-3" :src="url + data.photo" alt="" />
-      </div>
-      <div class="col-8 mt-4 ms-n1 ms-s-n1">
-        <div class="card-block">
-          <h5>{{ data.name }}</h5>
-          <p>{{ data.designation }}</p>
-        </div>
-      </div>
-    </div>
+  <div class="image_card text-center">
+        <!-- <img :src="require('@/assets/team/1.png')"/> -->
+        <img :src="require(`@/assets/team/${data.photo}`)" :style="{objectFit:`cover`}"/>
+        <h5 class="person_name py-2">{{ data.name }}</h5>
+        <h6 class="person_name">{{ data.designation }}</h6>
   </div>
 </template>
 
@@ -31,17 +24,46 @@ export default {
 .custom-round {
   border-radius: 1rem !important;
 }
+
 .p-font {
   font-size: 0.8rem;
   line-height: 2em;
 }
 
 img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  max-width: 100%;
+  /* border-radius: 10%; */
+  transition: 0.5s ease;
 }
+
+img:hover {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  cursor: pointer;
+  border-radius: 10%;
+  transition: 0.5s ease;
+}
+
+.image_card:hover .details{
+  display: block;
+}
+.person_name{
+  height: 100%;
+  visibility: hidden;
+}
+.image_card:hover .person_name{
+  visibility: visible;
+}
+
 .ms-n1 {
   margin-left: -4.5rem !important;
 }
+
 @media only screen and (max-width: 600px) {
   .ms-s-n1 {
     margin-left: -4.25rem !important;

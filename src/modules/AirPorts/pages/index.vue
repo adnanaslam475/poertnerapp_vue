@@ -4,36 +4,22 @@
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
     <v-fragment class="d-flex flex-row background-repeater-custom" v-if="!load">
+    <!-- Sidebar -->
       <div
-        class="nav d-flex flex-column grad justify-content-center align-items-center main-container-bg topBottomRadius p-5"
-        v-if="!load"
-      >
-        <div
-          class="nav flex-column nav-pills grad mb-3 nav-scroll"
-          id="v-pills-tab"
-          role="tablist"
-          aria-orientation="vertical"
-        >
-          <div
-            class="nav-item d-flex flex-column justify-content-center align-items-center"
-          >
-            <router-link
-              v-for="(ele, i) in data"
-              :key="i"
-              to="/airports"
-              :class="getClass(i)"
-            >
-              <div @click="activeAirport(i)">
-                <img
-                  :src="url + ele.image"
-                  width="90"
-                  height="90"
-                  class="img-class"
-                />
+      
+        class="nav d-flex flex-column justify-content-center align-items-center main-container-bg topBottomRadius py-5 sidebar"
+        v-if="!load">
+        <div class="nav flex-column nav-pills mb-3 nav-scroll" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical">
+          <div class="nav-item d-flex flex-column justify-content-center align-items-center">
+            <router-link v-for="(ele, i) in data" :key="i" to="/airports" :class="getClass(i)">
+              <div @click="activeAirport(i)" class="d-flex align-items-center image">
+                <img :src="require('@/assets/airports/sidebar/1.jpeg')" width="90" height="90" class="img-class d-flex text-center"/>
+                <div class="centered">HNV</div>
+                <!-- <p class="text-capitalize pl-3">
+                  {{ ele.name }}
+                </p> -->
               </div>
-              <p class="text-capitalize">
-                {{ ele.name }}
-              </p>
             </router-link>
           </div>
         </div>
@@ -119,111 +105,5 @@ export default {
 };
 </script>
 <style scoped>
-.flex-row {
-  background-color: #f4f4f4;
-}
-.grad {
-  background-image: linear-gradient(#ebd8c6, #dddfdf);
-}
-
-.main-container-bg {
-  height: fit-content;
-  width: fit-content;
-  /* background-color: blue; */
-}
-
-i {
-  color: grey;
-  font-size: 30px;
-}
-
-p {
-  color: grey;
-  font-size: 10px;
-  font-weight: bold;
-}
-a {
-  height: fit-content;
-  width: fit-content;
-  text-decoration: none;
-  /* background-color: aqua; */
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-a:hover .icon-container {
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: #b39032;
-}
-
-a:hover i {
-  color: white;
-}
-
-a:hover p {
-  color: black;
-}
-
-.active-class {
-  height: fit-content;
-  width: fit-content;
-  text-decoration: none;
-}
-
-.active-class .icon-container {
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: #b39032;
-}
-
-.active-class i {
-  color: white;
-}
-
-.active-class p {
-  color: black;
-}
-
-.icon-container {
-  height: 50px;
-  width: 50px;
-}
-
-.btn-container {
-  width: 180px;
-  color: white;
-  background-color: #b39032;
-}
-
-.topBottomRadius {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.text-capitalize {
-  font-size: 13px;
-  color: transparent;
-}
-
-.img-class {
-  border-radius: 100%;
-}
-.background-repeater-custom {
-  /* background-repeat: repeat-x repeat-y;
-  background: url("../../../assets/background.jpeg"); */
-}
-.nav-scroll {
-  height: 100vh;
-  overflow-y: scroll;
-}
-.nav-scroll ::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
+@import '../styles/index.css';
 </style>

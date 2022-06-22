@@ -4,6 +4,7 @@
       class="img-fluid rounded custom-round"
       :src="image"
       alt="Card image cap"
+      :style="{height:height,objectFit:object_fit}"
     />
   </div>
 </template>
@@ -12,9 +13,9 @@
   export default {
     name: "CardImage",
     props: {
-      image: {
-        type: String,
-        default: "",
+      image: {type: String,default: "",
+      height: { type: String, default: "" },
+      object_fit: { type: String, default: "" },
       },
     },
   }

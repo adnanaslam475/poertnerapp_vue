@@ -25,13 +25,20 @@
             >
               <div @click="activeLeadership(i)">
                 <img
+                  :src="require(`@/assets/leadership/profile_images/${ele.profile_image}`)"
+                  width="90"
+                  height="90"
+                  class="img-class"
+                  :style="{objectFit:'cover'}"
+                />
+                <!-- <img
                   :src="url + ele.cover_image"
                   width="90"
                   height="90"
                   class="img-class"
-                />
+                /> -->
               </div>
-              <p class="text-capitalize">
+              <p class="text-capitalize text-center">
                 {{ ele.name }}
               </p>
             </router-link>

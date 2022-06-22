@@ -1,82 +1,120 @@
 <template>
   <v-fragment>
-    <nav
-      class="navbar navbar-fixed-top sticky navbar-expand-lg navbar-dark p-md-3 mb-5"
-      style="background: #ffffff"
-    >
+    <nav :class="{change_color: scrollPosition > 50}" class="navbar navbar-fixed-top sticky navbar-expand-lg navbar-dark p-md-3">
       <div class="container">
         <router-link class="navbar-brand" :to="'/'">
-          <img src="../../assets/logo.png" alt="" width="130" height="90" />
+          <img src="../../assets/logo.png" alt="" width="130" height="60" />
         </router-link>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="mx-auto"></div>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/our-story'"
-                >Our Story</router-link
-              >
+              <router-link class="nav-link" :to="'/'">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/Leadership'"
-                >Our Leadership</router-link
-              >
+              <router-link class="nav-link" :to="'/our-story'">Our Story</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/management-team'"
-                >Our Management Team</router-link
-              >
+              <router-link class="nav-link" :to="'/Leadership'">Our Leadership</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/Philosophies'"
-                >Our Philosophies</router-link
-              >
+              <router-link class="nav-link" :to="'/management-team'">Our Management Team</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/airports'"
-                >Airports</router-link
-              >
+              <router-link class="nav-link" :to="'/Philosophies'">Our Philosophies</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/corporate'"
-                >Corporate</router-link
-              >
+              <router-link class="nav-link" :to="'/airports'">Airports</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/commercial'"
-                >Commercial</router-link
-              >
+              <router-link class="nav-link" :to="'/corporate'">Corporate</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-black" :to="'/contact-us'"
-                >Contact-us</router-link
-              >
+              <router-link class="nav-link" :to="'/commercial'">Commercial</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="'/contact-us'">Contact-us</router-link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <router-view />
   </v-fragment>
 </template>
 <script>
-  export default {}
+export default {
+  data() {
+    return {
+      data: {
+        scrollPosition: null
+      }
+    }
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  }
+}
+
+
 </script>
 <style scoped>
-  .sticky {
-    position: sticky;
-    top: 1px; /* When the element reaches top: 10px, it becomes fixed. */
-    z-index: 100;
-  }
+.sticky {
+  position: sticky;
+  top: 1px;
+  /* When the element reaches top: 10px, it becomes fixed. */
+  z-index: 100;
+}
+
+.app .navbar {
+  /* background: transparent; */
+  background-color: #00000093;
+  /* border-bottom: 0.3px solid white; */
+  /* position: absolute; */
+  width: 100%;
+}
+
+.navbar {
+  /* transition: background 0.5s linear; */
+  transition: all .8s;
+}
+
+/* On Scroll */
+.change_color {
+       background-color:red;
+   }
+
+.navbar:hover {
+  background: white;
+}
+
+.navbar:hover .navbar-nav .nav-link {
+  color: black !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: black !important;
+}
+
+a.nav-link.router-link-exact-active.router-link-active {
+  color: white !important;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}
+a.nav-link:hover{
+  /* border-bottom: 1px black solid; */
+  /* font-weight: bold; */
+}
 </style>

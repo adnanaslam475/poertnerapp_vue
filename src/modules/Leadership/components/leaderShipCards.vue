@@ -2,12 +2,20 @@
   <div class="card rounded custom-round px-2">
     <img
       class="card-img-top rounded custom-round p-1"
-      :src="url + data.cover_image"
+      :src="require(`@/assets/leadership/covers/${data.cover_image}`)" :style="{objectFit:'cover'}"
       alt="Card image cap"
     />
+    <!-- <img
+      class="card-img-top rounded custom-round p-1"
+      :src="url + data.cover_image"
+      alt="Card image cap"
+    /> -->
+
+    <!-- <img class="card-img-top rounded custom-round p-1" :src="require(`@/assets/leadership/covers/${data.cover_image}`)"/> -->
     <div class="card-body little-profile px-5">
       <div class="d-flex justify-content-start pro-img text-start">
-        <img :src="url + data.profile_image" alt="user" />
+        <!-- <img :src="url + data.profile_image" alt="user" /> -->
+        <img :src="require(`@/assets/leadership/profile_images/${data.profile_image}`)" :style="{objectFit:'cover'}" alt="user"/>
         <span class="ms-3 pb-4 m-b-0 text-start pro-text">
           <span class="h4 d-block prof-name"> {{ data.name }} </span>
           <span class="p d-block desig"> {{ data.designation }} </span>

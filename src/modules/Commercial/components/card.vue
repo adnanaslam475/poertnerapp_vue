@@ -1,5 +1,5 @@
 <template>
-  <div class="card rounded custom-round px-2">
+  <div class="card rounded custom-round px-2" :style="{height:height}">
     <div class="card-body">
       <h4 class="text-start text-wrap">Commercial</h4>
       <h6 class="text-start text-wrap g-color">Advertising Opportunities</h6>
@@ -11,11 +11,7 @@
         <br />
 
         RACL has come up with the Advertising opportunities for suitable parties
-        to advertise with our company.
-
-        <br />
-        <br />
-        From billboard leasing, to trolley slots, all are available for
+        to advertise with our company. From billboard leasing, to trolley slots, all are available for
         companies that want to have a wider exposure, digital slots and many
         more ideas that can be referred to on the attached media kit
         <br />
@@ -32,6 +28,10 @@
 <script>
   export default {
     name: "Card",
+    props:{
+      data: Object,
+      height: { type: String, default: "" },
+    }
   }
 </script>
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
   <v-fragment>
-    <Navbar />
+    <!-- <Navbar /> -->
 
     <div
       class="banner-image w-100 vh-100 d-flex justify-content-between align-items-center"
@@ -32,13 +32,13 @@
 </template>
 
 <script>
-  import Navbar from "../components/Navbar.vue"
+  // import Navbar from "../modules/navBar/Navbar.vue"
+  // import Navbar from '@/components/navBar/verticalNavbar.vue'
 
   export default {
     data() {
       return {}
-    },
-    components: { Navbar },
+    }
   }
 </script>
 <style scoped>
