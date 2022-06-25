@@ -1,6 +1,6 @@
 <template>
   <v-fragment>
-    <nav :class="{change_color: scrollPosition > 50}" class="navbar navbar-fixed-top sticky navbar-expand-lg navbar-dark p-md-3">
+    <nav :class="{change_color: scrollPosition > 50}" class="navbar navbar-fixed-top sticky navbar-expand-lg navbar-dark p-md-2">
       <div class="container">
         <router-link class="navbar-brand" :to="'/'">
           <img src="../../assets/logo.png" alt="" width="130" height="60" />
@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       data: {
-        scrollPosition: null
+        
       }
     }
   },
@@ -68,7 +68,7 @@ export default {
 </script>
 <style scoped>
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 1px;
   /* When the element reaches top: 10px, it becomes fixed. */
   z-index: 100;
@@ -77,6 +77,7 @@ export default {
 .app .navbar {
   /* background: transparent; */
   background-color: #00000093;
+  /* background-color: transparent; */
   /* border-bottom: 0.3px solid white; */
   /* position: absolute; */
   width: 100%;
@@ -86,11 +87,6 @@ export default {
   /* transition: background 0.5s linear; */
   transition: all .8s;
 }
-
-/* On Scroll */
-.change_color {
-       background-color:red;
-   }
 
 .navbar:hover {
   background: white;

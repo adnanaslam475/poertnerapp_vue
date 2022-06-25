@@ -1,24 +1,30 @@
 <script>
-import Navbar from '@/components/navBar/verticalNavbar.vue'
-export default {
-  name: "App",
-  components: {Navbar},
-};
+  import Navbar from '@/components/navBar/verticalNavbar.vue'
+  export default {
+    data() {
+      return {}
+    },
+    methods: {},
+    name: "App",
+    components: {
+      Navbar
+    }
+  };
 </script>
 
 <template>
   <div class="app">
-    <Navbar/>
+    <Navbar />
     <router-view />
   </div>
 </template>
 
 <style>
-.app {
-  /* background-color: #962929; */
-  /* background-repeat: repeat-x repeat-y;
+  .app {
+    /* background-color: #962929; */
+    /* background-repeat: repeat-x repeat-y;
   background: url("./assets/background.jpeg");
   opacity: 0.6; */
-  
-}
+
+  }
 </style>

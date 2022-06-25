@@ -1,0 +1,159 @@
+.index-1 {
+    z-index: 1;
+  }
+  
+  .home-content {
+    /* position: absolute; */
+    /* width: 99%; */
+    /* z-index: 12; */
+    /* top: 0; */
+    /* background-color: transparent; */
+    /* position: relative; */
+    margin-top:0;
+    max-height: 100vh;
+    overflow: hidden;
+  
+  }
+  .btn-box {
+    background-color: #b39032 !important;
+    color: white !important;
+    border-radius: 50px 50px 50px 0 !important;
+    width: fit-content;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .btn-box-2 {
+    background-color: #ffffff !important;
+    color: rgb(56, 56, 56) !important;
+    border-radius: 50px !important;
+    width: fit-content;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .btn-box-2:hover{
+    color: #b39032 !important;
+  }
+  .heading_underline{
+    /* display: block; */
+    color: white;
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    
+  }
+  
+  .web-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b39032;
+    color: white;
+    width: fit-content;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+  }
+  
+  .icons-box {
+    margin: 30px;
+  }
+  
+  .text-box {
+    color: white;
+    font-weight: bold;
+    font-size: 56px;
+  }
+  
+  .para-box {
+    color: white;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .para-width {
+    width: 60%;
+  }
+  
+  .para-diection {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+  }
+  
+  .img-box {
+    height: 100px;
+    width: 150px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 18px;
+    margin: 8px;
+  }
+  
+  /* .banner-image {
+      background-image: url("./sownload.jpg");
+      background-size: cover;
+    } */
+  
+  @media screen and (max-width: 800px) {
+    .para-box {
+      width: 100%;
+    }
+  }
+  
+  [v-cloak] {
+    display: none;
+  }
+  
+  /* Hero */
+
+  .hero_image{
+    position: absolute;
+    z-index: -1000;
+    height: 100vh;
+    width: 100%;
+    filter: brightness(50%);
+    
+    /* animation-delay: 1s;
+    animation-name: zoomIn;
+    animation-duration: 20s;
+    animation-fill-mode:both;
+    overflow: hidden; */
+  }
+
+  /* @keyframes zoomIn {
+    from { transform: scale(1); }
+    to   { transform: scale(1.1) translate(-10px, -10px);}
+  } */
+  /* Second Section */
+  .second_heading{
+    /* background-color: white; */
+  }
+.section_heading .section_sub_heading{
+    font-size: large;
+    font-weight: bolder;
+}
+
+
+/*  */
+
+.aircraft_parent{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.aircraft_child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.aircraft_image{
+    filter: brightness(50%);   
+}

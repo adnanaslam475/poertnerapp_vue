@@ -1,18 +1,8 @@
 <template>
   <div>
-    <div class="scrollable" ref="scrollable">
-      <div class="video" ref="video">
-        <vue-scrubbable-video :current-progress="scrubbed" :frames-per-second="9" :start="0" :end="8"
-          @frames-generating="init(); outputEvent('frames generating')" @frames-ready="allFramesLoaded($event)"
-          @frame-shown="outputEvent('showing frame', $event)"
-          @frame-unavailable="outputEvent('attempt to display unready frame', $event)"
-          @frame-ready="frameLoaded($event)">
-          <source src="../../../assets/video.webm" type="video/mp4" />
-          <!-- <source src="https://dane-iracleous-portfolio.s3-us-west-2.amazonaws.com/stock/jellyfish-small.webm" type="video/webm" /> -->
-        </vue-scrubbable-video>
-      </div>
-    </div>
+    <!-- Hero -->
     <div class="home-content">
+      <img class="hero_image" src="@/assets/ourStory/our_story1.jpg" alt="">
       <div class="banner-image w-100 vh-100 d-flex align-items-stretch align-items-center">
         <div class="container w-90 d-flex justify-content-between">
           <div class="d-flex flex-column justify-content-center w-75 index-1">
@@ -22,8 +12,8 @@
               RACL is 100% percent government-owned company incorporated on 11
               January 2021,to manage domestic airports in Maldives
             </p>
-            <button class="btn btn-box" @click="changeRouter()">
-              More Details
+            <button class="btn btn-box more_details_btn" @click="changeRouter()">
+              Learn More
             </button>
           </div>
           <p class="para-box para-diection d-flex justify-content-center align-items-end year">
@@ -32,199 +22,267 @@
         </div>
       </div>
     </div>
+    <!-- Second Section -->
+    <b-container>
+      <div class="py-5 text-center second_heading">
+        <h1 class="py-1 fw-bold">Hello! We Have A New Visitor. Welcome, On-Board!</h1>
+        <p class="text-muted">Hello! We Have A New Visitor. Welcome, On-Board! Hello! We Have A New Visitor. Welcome,
+          On-Board! Hello! We
+          Have A New Visitor. Welcome, On-Board!</p>
+      </div>
+      <b-row class="d-flex align-items-center">
+        <b-col cols="6" class="pr-0 aircraft_parent">
+          <CardImage :image="require('@/assets/commercial/delivery.jpg')" :height="'400px'" :object_fit="'cover'"
+            class="aircraft_image" />
+          <div class="aircraft_child text-center">
+            <h1 class="fw-bold">On-Board Courier</h1>
+            <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
+          </div>
+        </b-col>
+        <b-col cols="6">
+          <b-row class="">
+            <b-col class="aircraft_parent">
+              <CardImage :image="require('@/assets/ourStory/our_story2.jpg')" :height="'200px'" :object_fit="'cover'"
+                class="aircraft_image" />
+              <div class="aircraft_child text-center">
+                <h6>On-Board Courier</h6>
+                <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
+              </div>
+            </b-col>
+            <b-col class="aircraft_parent">
+              <CardImage :image="require('@/assets/commercial/air_cargo.jpg')" :height="'200px'" :object_fit="'cover'"
+                class="aircraft_image" />
+              <div class="aircraft_child text-center">
+                <h6>Private & VIP Jet Charters</h6>
+                <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
+              </div>
+            </b-col>
+          </b-row>
+
+          <b-row>
+            <b-col class="pt-1 aircraft_parent">
+              <CardImage :image="require('@/assets/corporate/image1.jpg')" :height="'200px'" :object_fit="'cover'"
+                class="aircraft_image" />
+              <div class="aircraft_child text-center">
+                <h1>Aircraft Leasing & Trading</h1>
+                <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
+              </div>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+      <b-row class="pt-1">
+        <b-col class="aircraft_parent">
+          <CardImage :image="require('@/assets/home/hero.jpg')" :height="'400px'" :object_fit="'cover'"
+            class="aircraft_image" />
+          <div class="aircraft_child text-center">
+            <h1>Aircraft Leasing & Trading</h1>
+            <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
+          </div>
+
+        </b-col>
+      </b-row>
+    </b-container>
+
+    <!-- Third Section -->
+    <b-container>
+      <div class="py-5 text-center">
+        <h1 class="py-1 fw-bold">The best place for you to travel</h1>
+        <p class="text-muted">Hello! We Have A New Visitor. Welcome, On-Board! Hello! We Have A New Visitor.</p>
+      </div>
+      <div>
+        <carousel-3d>
+          <slide :index="0">
+            <!-- Slide 1 Content -->
+            <img src="../../../assets/ourStory/our_story2.jpg" width="auto" height="100%" style="object-fit: cover;"
+              alt="">
+          </slide>
+          <slide :index="1">
+            <img src="../../../assets/ourStory/our_story1.jpg" width="auto" height="100%" style="object-fit: cover;"
+              alt="">
+          </slide>
+          <slide :index="2">
+            <img src="../../../assets/ourStory/our_story3.jpg" width="auto" height="100%" style="object-fit: cover;"
+              alt="">
+          </slide>
+          <slide :index="3">
+            <img src="../../../assets/corporate/image1.jpg" width="auto" height="100%" style="object-fit: cover;"
+              alt="">
+          </slide>
+          <slide :index="4">
+            <img src="../../../assets/corporate/image2.jpg" width="auto" height="100%" style="object-fit: cover;"
+              alt="">
+          </slide>
+          <slide :index="5">
+            <img src="../../../assets/home/hero.jpg" width="auto" height="100%" style="object-fit: cover;" alt="">
+          </slide>
+          <slide :index="6">
+            <img src="../../../assets/ourStory/our_story3.jpg" width="auto" height="100%" style="object-fit: cover;"
+              alt="">
+          </slide>
+        </carousel-3d>
+      </div>
+    </b-container>
+
+    <!-- Fourth Section - Daily Services Destination -->
+    <b-container>
+      <div class="py-4 text-center">
+        <h1 class="py-1 fw-bold">Daily Services Destination</h1>
+        <p class="text-muted">Hello! We Have A New Visitor. Welcome, On-Board! Hello! We Have A New Visitor.
+        </p>
+      </div>
+    <Services />
+    </b-container>
+
+    <!-- Footer -->
+
+    <footer class="container-fluid footer_background py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="logo-part">
+                  <img src="../../../assets/logo.png" class="w-50 logo-footer">
+                  <h1 class="under_logo">Subscribe here</h1>
+                  <!-- <form class="form-footer my-3">
+                    <input type="text" placeholder="Email Address" name="search">
+                    <input type="button" value="Go">
+                  </form> -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-3 px-4">
+                <h5 class="col_heading">Company Info</h5>
+                <a href="#" class="btn-footer"> About Us </a><br>
+                <a href="#" class="btn-footer"> Our Philosophies </a><br>
+                <a href="#" class="btn-footer"> We are hiring </a><br>
+                <a href="#" class="btn-footer"> Blog </a><br>
+              </div>
+              <div class="col-md-3 px-4">
+                <h5 class="col_heading">Features</h5>
+                <a href="#" class="btn-footer"> About Us </a><br>
+                <a href="#" class="btn-footer"> Our Philosophies </a><br>
+                <a href="#" class="btn-footer"> We are hiring </a><br>
+                <a href="#" class="btn-footer"> Blog </a><br>
+              </div>
+              <div class="col-md-3 px-4">
+                <h5 class="col_heading">Legal</h5>
+                <a href="#" class="btn-footer"> About Us </a><br>
+                <a href="#" class="btn-footer"> Our Philosophies </a><br>
+                <a href="#" class="btn-footer"> We are hiring </a><br>
+                <a href="#" class="btn-footer"> Blog </a><br>
+              </div>
+              <div class="col-md-3 px-4">
+                <h5 class="col_heading">Get in touch</h5>
+                <div class="d-flex align-items-center">
+                  <img src="../../../assets/footer/phone-solid.svg" width="30px" height="30px" alt="">
+                  <a href="#" class="btn-footer px-2"> 
+                    +960 330 6969 </a><br>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img src="../../../assets/footer/location-dot-solid.svg" width="30px" height="30px" alt="">
+                  <a href="#" class="btn-footer px-2"> 
+                    H. Suez 6th & 7th Floor, Ameeru Ahmed Magu, Male’ </a><br>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img src="../../../assets/footer/envelope-solid.svg" width="30px" height="30px" alt="">
+                  <a href="#" class="btn-footer px-2"> 
+                    info@airports.mv </a><br>
+                </div>
+              </div>
+              <!-- <div class="col-md-6 px-4">
+                <h6 class="col_heading"> Legal</h6>
+                <div class="row ">
+                  <div class="col-md-6">
+                    <ul>
+                      <li> <a href="#"> Home</a> </li>
+                      <li> <a href="#"> About</a> </li>
+                      <li> <a href="#"> Service</a> </li>
+                      <li> <a href="#"> Team</a> </li>
+                      <li> <a href="#"> Help</a> </li>
+                      <li> <a href="#"> Contact</a> </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 px-4">
+                    <ul>
+                      <li> <a href="#"> Cab Faciliy</a> </li>
+                      <li> <a href="#"> Fax</a> </li>
+                      <li> <a href="#"> Terms</a> </li>
+                      <li> <a href="#"> Policy</a> </li>
+                      <li> <a href="#"> Refunds</a> </li>
+                      <li> <a href="#"> Paypal</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+
+      </div>
+
+    </footer>
+    <b-container class="bg-light d-flex align-items-center justify-content-between py-3">
+      <div>
+        <h6>Made With Love By Otmanuiux All. Right Reserved</h6>
+      </div>
+      <div class="social">
+        <ul>
+          <li>
+            <a href="#">
+              <img class="footer_icon" src="../../../assets/home/icons/facebook-brands.svg" width="40px" height="40px" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/home/icons/instagram-brands.svg" width="40px" height="40px" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../../../assets/home/icons/twitter-brands.svg" width="40px" height="40px" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </b-container>
   </div>
 </template>
 
-<script src="https://unpkg.com/@diracleo/vue-scrubbable-video/dist/vue-scrubbable-video.min.js"></script>
-<script src="https://unpkg.com/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <script>
-  // import Navbar from "../components/Navbar.vue"
-import Navbar from '@/components/navBar/verticalNavbar.vue'
+  import CardImage from "../components/imageCard.vue"
+  import Services from "../components/services.vue"
 
-import VueScrubbableVideo from "@diracleo/vue-scrubbable-video";
-export default{
-  data(){
-    return{
-      scrubbed: 0,
-      loaded: 0
-    }
+  import {
+    Carousel3d,
+    Slide, 
+  } from 'vue-carousel-3d';
+  export default {
+    data() {
+      return {}
     },
-    components:{VueScrubbableVideo,Navbar},
+    components: {
+      CardImage,
+      Carousel3d,
+      Slide,
+      Services
+    },
     methods: {
-      init() {
-        var self = this;
-        var container = self.$refs.scrollable;
-        var video = self.$refs.video;
-        var offset = video.offsetHeight / 2;
-        var controller = new ScrollMagic.Controller({
-          container: container
-        });
-        var scene = new ScrollMagic.Scene({
-          triggerElement: video, 
-          duration: 400
-        })
-        .setPin(video)
-        .offset(offset)
-        .on("progress", function(ev) {
-          if(typeof(ev.progress) != 'undefined') {
-            self.scrubbed = ev.progress * 100;
-          }
-        })
-        .addTo(controller);
-      },
-      frameLoaded(e) {
-        var self = this;
-        self.loaded = e;
-      },
-      allFramesLoaded(e) {
-        var self = this;
-        self.loaded = 100;
-      },
-      outputEvent(str, arg1) {
-        var out = str;
-        if(typeof(arg1) != 'undefined') {
-          out += " at position "+arg1+"%";
-        }
-        console.log(out);
-      }
+
     }
-}
+  }
 </script>
 <style scoped>
-.index-1 {
-  z-index: 1;
-}
-
-.home-content {
-  /* position: absolute; */
-  /* width: 99%; */
-  /* z-index: 12; */
-  /* top: 0; */
-  /* background-color: transparent; */
-  /* position: relative; */
-  margin-top:0;
-  max-height: 100vh;
-  overflow: hidden;
-}
-.btn-box {
-  background-color: #b39032;
-  color: white;
-  border-radius: 20px;
-  width: fit-content;
-  height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.web-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #b39032;
-  color: white;
-  width: fit-content;
-  height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 10px;
-}
-
-.icons-box {
-  margin: 30px;
-}
-
-.text-box {
-  color: white;
-  font-weight: bold;
-  font-size: 56px;
-}
-
-.para-box {
-  color: white;
-  font-size: 15px;
-  line-height: 25px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.para-width {
-  width: 60%;
-}
-
-.para-diection {
-  writing-mode: tb-rl;
-  transform: rotate(-180deg);
-}
-
-.img-box {
-  height: 100px;
-  width: 150px;
-}
-
-.logo {
-  color: white;
-  font-size: 18px;
-  margin: 8px;
-}
-
-/* .banner-image {
-    background-image: url("./sownload.jpg");
-    background-size: cover;
-  } */
-
-@media screen and (max-width: 800px) {
-  .para-box {
-    width: 100%;
-  }
-}
-
-[v-cloak] {
-  display: none;
-}
-
-.scrollable {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: #fff;
-  z-index: 0;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 0;
-}
-
-.scrollable .content .video {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  pointer-events: none;
-}
-
-canvas {
-  pointer-events: none;
-}
-
-.scrollable .loading {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  color: #fff;
-}
-
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollable .loading>div {
-  display: inline-block;
-  font-size: 50px;
-  font-weight: bold;
-}
+  @import '../styles/hero.css';
+  @import '../styles/footer.css';
 </style>

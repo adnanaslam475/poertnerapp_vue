@@ -1,0 +1,30 @@
+
+
+.service_card{
+    background-color: #3c271d !important;
+    cursor: pointer;
+    padding: 2% 0;
+}
+.service_card:hover{
+    background-color: #5c4134 !important;
+}
+
+.service_card .content .title{
+    color: #cea46b;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 1% 0;
+    padding-bottom: 3%;
+}
+.service_card .content p{
+    color: white;
+}
+
+.services .service_card .content .icon{
+    padding: 5px 0;
+    color: white;
+}
+
+.services .service_card .content .icon i{
+    font-size: 40px;
+}
