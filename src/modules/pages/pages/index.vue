@@ -25,10 +25,8 @@
     <!-- Second Section -->
     <b-container>
       <div class="py-5 text-center second_heading">
-        <h1 class="py-1 fw-bold">Hello! We Have A New Visitor. Welcome, On-Board!</h1>
-        <p class="text-muted">Hello! We Have A New Visitor. Welcome, On-Board! Hello! We Have A New Visitor. Welcome,
-          On-Board! Hello! We
-          Have A New Visitor. Welcome, On-Board!</p>
+        <h1 class="py-1 fw-bold">This would be the welcome text!</h1>
+        <p class="text-muted">This would be the welcome text description space!</p>
       </div>
       <b-row class="d-flex align-items-center">
         <b-col cols="6" class="pr-0 aircraft_parent">
