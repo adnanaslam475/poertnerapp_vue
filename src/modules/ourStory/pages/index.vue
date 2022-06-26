@@ -54,6 +54,7 @@
   import Card1 from "../components/card1.vue"
 
   import CardImage from "../components/imageCard.vue"
+  
   export default {
     data() {
       return {}

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="https://unsplash.com/photos/jbQvJx2EWnU" alt="">
+        <img src="@assets/" alt="">
         <div class="home-content">
             <div class="banner-image w-100 vh-100 d-flex align-items-stretch align-items-center">
                 <div class="container w-90 d-flex justify-content-between">

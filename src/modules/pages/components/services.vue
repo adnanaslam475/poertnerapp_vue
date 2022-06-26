@@ -39,7 +39,7 @@
                             </div>
                         </b-col>
                     </b-row>
-                    <b-row class="pb-3 text-center">
+                    <b-row class="pb-5 text-center">
                         <b-col>
                             <div class="service_card">
                                 <div class="content">

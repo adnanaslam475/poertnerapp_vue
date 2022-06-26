@@ -9,6 +9,8 @@
     /* top: 0; */
     /* background-color: transparent; */
     /* position: relative; */
+    /* position: fixed; */
+    background-attachment: fixed;
     margin-top:0;
     max-height: 100vh;
     overflow: hidden;
@@ -114,12 +116,13 @@
   /* Hero */
 
   .hero_image{
-    position: absolute;
+    position: fixed;
     z-index: -1000;
     height: 100vh;
     width: 100%;
     filter: brightness(50%);
     
+    background-attachment: fixed;
     /* animation-delay: 1s;
     animation-name: zoomIn;
     animation-duration: 20s;
@@ -132,6 +135,9 @@
     to   { transform: scale(1.1) translate(-10px, -10px);}
   } */
   /* Second Section */
+  .sec_2{
+    background-color: white !important;
+  }
   .second_heading{
     /* background-color: white; */
   }
@@ -142,7 +148,9 @@
 
 
 /*  */
-
+.sec_3{
+  background-color: #f6f6f6;
+}
 .aircraft_parent{
     position: relative;
     text-align: center;
@@ -156,4 +164,14 @@
 }
 .aircraft_image{
     filter: brightness(50%);   
+}
+/* Sec 4 */
+
+.sec_4{
+  background-color: white;
+}
+
+.blank_sec_5{
+  display: block;
+  background-color: #f6f6f6;
 }
