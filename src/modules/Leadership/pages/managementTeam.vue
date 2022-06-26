@@ -3,7 +3,7 @@
 
       <PageHeader 
     :image="require('@/assets/ourStory/our_story3.jpg')" 
-    :heading="'Team Management'"
+    :heading="'Management Team'"
     :sub_heading="'sub heading of team management'" />
 
   <b-container>
