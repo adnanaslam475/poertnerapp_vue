@@ -1,5 +1,7 @@
 <template>
   <div>
+        <PageHeader :image="require('@/assets/home/hero.jpg')" :heading="'Airports'"
+      :sub_heading="'sub heading of airports'" />
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
@@ -49,9 +51,11 @@
 import AirportCard from "../components/airportCards.vue";
 import Detail from "../components/detail.vue";
 import Facility from "../components/Facilities.vue";
+import PageHeader from "@/modules/misc/PageHeader.vue"
+
 import axios from "axios";
 export default {
-  components: { AirportCard, Detail, Facility },
+  components: { AirportCard, Detail, Facility, PageHeader },
   data() {
     return {
       url: process.env.VUE_APP_IMAGE_URL,
