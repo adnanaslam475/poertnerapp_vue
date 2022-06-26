@@ -1,11 +1,17 @@
 <template>
+<div>
+
+      <PageHeader 
+    :image="require('@/assets/ourStory/our_story3.jpg')" 
+    :heading="'Team Management'"
+    :sub_heading="'sub heading of team management'" />
+
   <b-container>
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
     <b-row class="mt-3" v-else>
-      <h1 class="text-center py-3">Team Management</h1>
-
+      <!-- <h1 class="text-center py-3">Team Management</h1> -->
       <b-col md="2" sm="12" xs="12" class="mb-1" v-for="(n, index) in data" :key="index">
         <ManagementTeamCard :data="n"/>
       </b-col>
@@ -15,14 +21,17 @@
       </div>
     </b-row>
   </b-container>
+</div>
+
 </template>
 
 <script>
 import ManagementTeamCard from "../components/managementTeamCard.vue";
+  import PageHeader from "@/modules/misc/PageHeader.vue"
 import axios from "axios";
 
 export default {
-  components: { ManagementTeamCard },
+  components: { ManagementTeamCard,PageHeader },
   data() {
     return {
       load: true,
