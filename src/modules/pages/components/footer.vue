@@ -98,7 +98,7 @@
         <div class="bg-light footer_strip">
             <b-container class=" d-flex align-items-center justify-content-between py-3">
                 <div>
-                    <h6>Made With Love By Otmanuiux All. Right Reserved</h6>
+                    <h6>Regional Airports Company Limited. © All Rights Reserved</h6>
                 </div>
                 <div class="social">
                     <ul>
