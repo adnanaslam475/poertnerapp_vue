@@ -3,12 +3,12 @@
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
-    <b-row class="mt-3" v-else>
+    <b-row class="mt-5" v-else>
       <b-col
         md="6"
         sm="12"
         xs="12"
-        class="mb-5"
+        class="mb-3"
         v-for="(n, index) in data"
         :key="index"
       >

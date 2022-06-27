@@ -100,7 +100,7 @@
                 <div>
                     <h6>Regional Airports Company Limited. © All Rights Reserved</h6>
                 </div>
-                <div class="social">
+                <div class="social d-flex align-items-center justify-content-between">
                     <ul>
                         <li>
                             <a href="#">
@@ -259,6 +259,10 @@
     .logo-part {
         /* border-right: 1px solid grey; */
         height: 100%;
+    }
+    .social{
+        display: flex;
+        align-items: center;
     }
 
     /* below Footer */
