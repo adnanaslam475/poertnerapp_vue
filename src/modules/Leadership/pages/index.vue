@@ -16,14 +16,14 @@
           <div class="nav-item d-flex flex-column justify-content-center align-items-center py-3">
             <router-link v-for="(ele, i) in data" :key="i" to="/Leadership" :class="getClass(i)">
               <div @click="activeLeadership(i)">
-                <img :src="require(`@/assets/leadership/profile_images/${ele.profile_image}`)" width="90" height="90"
-                  class="img-class" :style="{objectFit:'cover'}" />
-                <!-- <img
+                <!-- <img :src="require(`@/assets/leadership/profile_images/${ele.profile_image}`)" width="90" height="90"
+                  class="img-class" :style="{objectFit:'cover'}" /> -->
+                <img
                   :src="url + ele.cover_image"
                   width="90"
                   height="90"
                   class="img-class"
-                /> -->
+                />
               </div>
               <p class="text-capitalize text-center">
                 {{ ele.name }}

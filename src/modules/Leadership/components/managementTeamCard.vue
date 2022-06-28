@@ -1,7 +1,7 @@
 <template>
   <div class="image_card text-center">
         <!-- <img :src="require('@/assets/team/1.png')"/> -->
-        <img :src="require(`@/assets/team/${data.photo}`)" :style="{objectFit:`cover`}"/>
+        <img :src="url +data.photo" :style="{objectFit:`cover`}"/>
         <h5 class="person_name py-2">{{ data.name }}</h5>
         <h6 class="person_name">{{ data.designation }}</h6>
   </div>
