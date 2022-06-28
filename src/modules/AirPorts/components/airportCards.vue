@@ -9,7 +9,7 @@
               rgba(0, 0, 0, 0),
               #b39032
             ), 
-            url(${url+data.image})`,
+            url(${url+data.image})`, 
       }"
 
     >
