@@ -7,13 +7,13 @@
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
-    <v-fragment class="d-flex flex-row background-repeater-custom">
+    <div class="d-flex flex-row background-repeater-custom">
       <div
-        class="nav d-flex flex-column grad justify-content-center align-items-center main-container-bg topBottomRadius p-5"
+        class="nav d-flex flex-column grad justify-content-center align-items-center main-container-bg topBottomRadius"
         v-if="!load">
         <div class="nav flex-column nav-pills grad mb-3 nav-scroll" id="v-pills-tab" role="tablist"
           aria-orientation="vertical">
-          <div class="nav-item d-flex flex-column justify-content-center align-items-center">
+          <div class="nav-item d-flex flex-column justify-content-center align-items-center py-3">
             <router-link v-for="(ele, i) in data" :key="i" to="/Leadership" :class="getClass(i)">
               <div @click="activeLeadership(i)">
                 <img :src="require(`@/assets/leadership/profile_images/${ele.profile_image}`)" width="90" height="90"
@@ -34,12 +34,12 @@
       </div>
       <div style="width: 100%" class="mx-3" v-if="!load">
         <b-row v-for="(ele, i) in data" :key="i">
-          <b-col md="12" sm="12" xs="12" v-if="ele.active">
+          <b-col md="12" sm="12" xs="12" class="pt-3" v-if="ele.active">
             <LeaderShipCard :data="ele" />
           </b-col>
         </b-row>
       </div>
-    </v-fragment>
+    </div>
   </div>
 </template>
 
@@ -114,7 +114,7 @@
   }
 
   .grad {
-    background-image: linear-gradient(#ebd8c6, #dddfdf);
+    /* background-image: linear-gradient(#ebd8c6, #dddfdf); */
   }
 
   .main-container-bg {

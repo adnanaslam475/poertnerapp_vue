@@ -1,21 +1,22 @@
 <template>
   <div>
-        <PageHeader :image="require('@/assets/home/hero.jpg')" :heading="'Airports'"
-      :sub_heading="'sub heading of airports'" />
+        <PageHeader 
+    :image="require('@/assets/ourStory/our_story1.jpg')" 
+    :heading="'Airports'"
+    :sub_heading="'sub heading of airports'" />
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
     <v-fragment class="d-flex flex-row background-repeater-custom" v-if="!load">
     <!-- Sidebar -->
       <div
-      
-        class="nav d-flex flex-column justify-content-center align-items-center main-container-bg topBottomRadius py-5 sidebar"
+        class="nav d-flex flex-column justify-content-center align-items-center main-container-bg topBottomRadius py-3 sidebar"
         v-if="!load">
         <div class="nav flex-column nav-pills mb-3 nav-scroll" id="v-pills-tab" role="tablist"
           aria-orientation="vertical">
           <div class="nav-item d-flex flex-column justify-content-center align-items-center">
             <router-link v-for="(ele, i) in data" :key="i" to="/airports" :class="getClass(i)">
-              <div @click="activeAirport(i)" class="d-flex align-items-center image">
+              <div @click="activeAirport(i)" class="d-flex align-items-center side_image">
                 <img :src="require('@/assets/airports/sidebar/1.jpeg')" width="90" height="90" class="img-class d-flex text-center"/>
                 <div class="centered">HNV</div>
                 <!-- <p class="text-capitalize pl-3">
@@ -28,7 +29,7 @@
       </div>
       <div style="width: 100%" class="mx-3" v-if="!load">
         <b-row class="mx-3" v-for="(ele, i) in data" :key="i">
-          <b-col md="12" sm="12" xs="12" v-if="ele.active">
+          <b-col md="12" sm="12" xs="12" class="pt-3" v-if="ele.active">
             <AirportCard :data="ele" />
           </b-col>
           <b-col md="6" sm="12" xs="12" class="mt-2" v-if="ele.active">
@@ -51,8 +52,7 @@
 import AirportCard from "../components/airportCards.vue";
 import Detail from "../components/detail.vue";
 import Facility from "../components/Facilities.vue";
-import PageHeader from "@/modules/misc/PageHeader.vue"
-
+  import PageHeader from "@/modules/misc/PageHeader.vue"
 import axios from "axios";
 export default {
   components: { AirportCard, Detail, Facility, PageHeader },

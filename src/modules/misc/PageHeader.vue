@@ -1,5 +1,5 @@
 <template>
-    <b-container-fluid>
+    <div class="container-fluid p-0">
 
         <header class="header">
             <!-- Background image -->
@@ -19,7 +19,7 @@
             </div>
             <!-- Background image -->
         </header>
-    </b-container-fluid>
+    </div>
 
 
 

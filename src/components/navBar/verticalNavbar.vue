@@ -1,6 +1,5 @@
 <template>
-  <v-fragment>
-    <nav :class="{change_color: scrollPosition > 50}" class="navbar navbar-fixed-top sticky navbar-expand-lg navbar-dark p-md-2">
+  <nav class="navbar navbar-fixed-top sticky navbar-expand-lg navbar-dark p-md-2">
       <div class="container">
         <router-link class="navbar-brand" :to="'/'">
           <img src="../../assets/logo.png" alt="" width="130" height="60" />
@@ -43,10 +42,11 @@
         </div>
       </div>
     </nav>
-  </v-fragment>
 </template>
 <script>
+import { Fragment } from 'vue-fragment'
 export default {
+  components: { Fragment },
   data() {
     return {
       data: {
@@ -55,13 +55,7 @@ export default {
     }
   },
   methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY
-    },
   },
-  mounted() {
-    window.addEventListener('scroll', this.updateScroll);
-  }
 }
 
 

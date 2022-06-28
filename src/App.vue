@@ -24,11 +24,4 @@
 </template>
 
 <style>
-  .app {
-    /* background-color: #962929; */
-    /* background-repeat: repeat-x repeat-y;
-  background: url("./assets/background.jpeg");
-  opacity: 0.6; */
-
-  }
 </style>
