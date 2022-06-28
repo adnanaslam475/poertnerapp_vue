@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
       <div class="spinner-border text-dark text-center" role="status"></div>
     </div>
-    <v-fragment class="d-flex flex-row background-repeater-custom">
+    <div class="d-flex flex-row background-repeater-custom">
       <div
         class="nav d-flex flex-column grad justify-content-center align-items-center main-container-bg topBottomRadius"
         v-if="!load">
@@ -39,7 +39,7 @@
           </b-col>
         </b-row>
       </div>
-    </v-fragment>
+    </div>
   </div>
 </template>
 
