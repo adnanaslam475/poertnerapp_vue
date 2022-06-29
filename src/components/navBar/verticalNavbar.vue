@@ -66,7 +66,10 @@ export default {
   /* When the element reaches top: 10px, it becomes fixed. */
   z-index: 100;
 }
-
+img{
+  background-size: cover;
+  width: auto !important;
+}
 .app .navbar {
   /* background: transparent; */
   background-color: #00000093;

@@ -7,8 +7,8 @@
                         <div class="row">
                             <div class="col-md-12 ">
                                 <div class="logo-part">
-                                    <img src="../../../assets/logo.png" class="w-50 logo-footer">
-                                    <h1 class="under_logo">Subscribe here</h1>
+                                    <img src="../../../assets/logo.svg" class="w-50 logo-footer">
+                                    <h1 class="under_logo">Regional Airports Company Limited</h1>
                                     <!-- <form class="form-footer my-3">
                     <input type="text" placeholder="Email Address" name="search">
                     <input type="button" value="Go">
@@ -139,9 +139,6 @@
     }
 
     /* footer */
-    body {
-        font-family: 'Signika', sans-serif;
-    }
 
     .footer_background {
         background: #3c271d;
