@@ -202,6 +202,7 @@
 
   .img-class {
     border-radius: 100%;
+    object-fit: cover !important;
   }
 
   .background-repeater-custom {

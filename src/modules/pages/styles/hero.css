@@ -121,7 +121,7 @@
     height: 100vh;
     width: 100%;
     filter: brightness(50%);
-    
+    /* background-size: cover !important; */
     background-attachment: fixed;
     /* animation-delay: 1s;
     animation-name: zoomIn;
@@ -129,6 +129,14 @@
     animation-fill-mode:both;
     overflow: hidden; */
   }
+  @media (min-width: 320) { 
+    .app .navbar{
+      background-color: white !important;
+    }
+    .hero_image{
+      height: 50vh;
+    }
+   }
 
   /* @keyframes zoomIn {
     from { transform: scale(1); }
