@@ -31,8 +31,9 @@
             On-Board! Hello! We
             Have A New Visitor. Welcome, On-Board!</p>
         </div>
-        <b-row class="d-flex align-items-center">
-          <b-col cols="6" class="pr-0 aircraft_parent">
+        <b-row class="d-flex align-items-center justify-content-start row-eq-height">
+          <!-- Left Column -->
+          <b-col md="6" sm="12" class="aircraft_parent" style="padding-right:0">
             <CardImage :image="require('@/assets/commercial/delivery.jpg')" :height="'400px'" :object_fit="'cover'"
               class="aircraft_image" />
             <div class="aircraft_child text-center">
@@ -40,9 +41,11 @@
               <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
             </div>
           </b-col>
-          <b-col cols="6">
-            <b-row class="">
-              <b-col class="aircraft_parent">
+          <!-- Right Column -->
+          <b-col md="6" sm="12">
+            <b-row class="row-eq-height"  style="padding-top: 0.75rem;">
+
+              <b-col class="aircraft_parent" style="padding-right:0">
                 <CardImage :image="require('@/assets/ourStory/our_story2.jpg')" :height="'200px'" :object_fit="'cover'"
                   class="aircraft_image" />
                 <div class="aircraft_child text-center">
@@ -58,10 +61,11 @@
                   <a href="#" class="btn btn-box-2 mt-2">Learn More</a>
                 </div>
               </b-col>
+
             </b-row>
 
             <b-row>
-              <b-col class="pt-1 aircraft_parent">
+              <b-col class="aircraft_parent" style="margin-top: 0.75rem;">
                 <CardImage :image="require('@/assets/corporate/image1.jpg')" :height="'200px'" :object_fit="'cover'"
                   class="aircraft_image" />
                 <div class="aircraft_child text-center">
@@ -72,7 +76,8 @@
             </b-row>
           </b-col>
         </b-row>
-        <b-row class="pt-1">
+        <!-- Bottom Card -->
+        <b-row style="margin-top: 0.75rem;">
           <b-col class="aircraft_parent">
             <CardImage :image="require('@/assets/home/hero.jpg')" :height="'400px'" :object_fit="'cover'"
               class="aircraft_image" />
