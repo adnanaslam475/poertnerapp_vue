@@ -31,10 +31,10 @@
             On-Board! Hello! We
             Have A New Visitor. Welcome, On-Board!</p>
         </div>
-        <b-row class="d-flex align-items-center align-content-around flex-wrap align-self-stretch" style="padding-top: 0.75rem;">
+        <b-row class="d-flex align-items-center" style="padding-top: 0.75rem;">
           <!-- Left Column -->
           <b-col md="6" sm="12" class="aircraft_parent " style="padding-right:0">
-            <CardImage :image="require('@/assets/commercial/delivery.jpg')" :height="''" :object_fit="'cover'"
+            <CardImage :image="require('@/assets/commercial/delivery.jpg')" :height="'412px'" :object_fit="'cover'"
               class="aircraft_image"/>
             <div class="aircraft_child text-center">
               <h1 class="fw-bold">On-Board Courier</h1>
@@ -42,7 +42,7 @@
             </div>
           </b-col>
           <!-- Right Column -->
-          <b-col md="6" sm="12" class="h-100">
+          <b-col md="6" sm="12" class="">
             <b-row class="row-eq-height"  >
               <b-col class="aircraft_parent" style="padding-right:0">
                 <CardImage :image="require('@/assets/ourStory/our_story2.jpg')" :height="'200px'" :object_fit="'cover'"
