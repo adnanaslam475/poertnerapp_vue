@@ -9,8 +9,7 @@
             <h4 class="text-box">Regional Airports</h4>
             <h4 class="text-box">Company Limited</h4>
             <p class="para-box para-width">
-              RACL is 100% percent government-owned company incorporated on 11
-              January 2021,to manage domestic airports in Maldives
+              RACL is 100% percent government-owned company incorporated on 11 January 2021, to manage domestic airports in Maldives
             </p>
             <button class="btn btn-box more_details_btn" @click="changeRouter()">
               Learn More

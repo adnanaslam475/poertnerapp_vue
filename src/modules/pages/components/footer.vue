@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-md-12 ">
                                 <div class="logo-part">
-                                    <img src="../../../assets/logo.svg" class="w-50 logo-footer">
+                                    <img src="../../../assets/white_logo.png" class="w-50 logo-footer">
                                     <h1 class="under_logo">Regional Airports Company Limited</h1>
                                 </div>
                             </div>
@@ -98,19 +98,19 @@
                 <div class="social d-flex align-items-center justify-content-between">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/">
                                 <img class="footer_icon" src="../../../assets/home/icons/facebook-brands.svg"
                                     width="40px" height="40px" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.instagram.com/">
                                 <img src="../../../assets/home/icons/instagram-brands.svg" width="40px" height="40px"
                                     alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.twitter.com/">
                                 <img src="../../../assets/home/icons/twitter-brands.svg" width="40px" height="40px"
                                     alt="">
                             </a>

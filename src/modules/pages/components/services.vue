@@ -6,71 +6,11 @@
                 <img src="../../../assets/logo.png" width="300px" height="auto" alt="">
             </div>
             <section class="services">
+                <div class="text-center py-3">
+                <img src="../../../assets/home/Dotted Map DuoTone.png" width="600px" height="auto" alt="">
+            </div>
                 <b-container>
-                    <b-row class="py-3 text-center">
-                        <b-col>
-                            <div class="service_card">
-                                <div class="content">
-                                    <div class="icon"><i class="fa fa-code"></i></div>
-                                    <div class="title">Web Development</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.
-                                    </p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col>
-                            <div class="service_card">
-                                <div class="content">
-                                    <div class="icon"><i class="fa fa-code"></i></div>
-                                    <div class="title">Web Development</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.
-                                    </p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col>
-                            <div class="service_card">
-                                <div class="content">
-                                    <div class="icon"><i class="fa fa-mobile"></i></div>
-                                    <div class="title">App Development</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.
-                                    </p>
-                                </div>
-                            </div>
-                        </b-col>
-                    </b-row>
-                    <b-row class="pb-5 text-center">
-                        <b-col>
-                            <div class="service_card">
-                                <div class="content">
-                                    <div class="icon"><i class="fa fa-paint-brush"></i></div>
-                                    <div class="title">Web Design</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.
-                                    </p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col>
-                            <div class="service_card">
-                                <div class="content">
-                                    <div class="icon"><i class="fa fa-laptop"></i></div>
-                                    <div class="title">Responsive Design</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.
-                                    </p>
-                                </div>
-                            </div>
-                        </b-col>
-                        <b-col>
-                            <div class="service_card">
-                                <div class="content">
-                                    <div class="icon"><i class="fa fa-line-chart"></i></div>
-                                    <div class="title">Advertising</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.
-                                    </p>
-                                </div>
-                            </div>
-                        </b-col>
-                    </b-row>
+                    
                 </b-container>
                 <br>
             </section>

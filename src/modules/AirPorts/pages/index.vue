@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <PageHeader :image="require('@/assets/ourStory/our_story1.jpg')" :heading="'Airports'"
+    <PageHeader :image="require('@/assets/ourStory/our_story1.jpg')" :heading="'Our Airports'"
       :sub_heading="'sub heading of airports'" />
 
     <div class="d-flex justify-content-center m-3 p-3" v-if="load">
