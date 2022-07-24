@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./resources/**/*.blade.php", "./resources/**/*.js", "./resources/**/*.vue"],
-    theme: {
-            extend: {
-              fontFamily: {
-                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-              },
-            },
-    },
-    plugins: [require("@tailwindcss/forms")],
-  };
+  content: ["./src/**/*.vue", "src/**/*.vue"],
+  corePlugins: {
+    preflight: false,
+  },
+  prefix: "tw-",
+  important: true,
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
