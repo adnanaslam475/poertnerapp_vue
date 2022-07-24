@@ -56,7 +56,7 @@
         </li>
 
         <li class="button-container">
-          <social-sharing
+          <!-- <social-sharing
             :url="shareUrl"
             inline-template
             title="Vue Material Dashboard - Admin Template for Vue.js"
@@ -77,7 +77,7 @@
                 <i class="fab fa-twitter"></i>
               </network>
             </div>
-          </social-sharing>
+          </social-sharing> -->
         </li>
         <li class="github-buttons">
           <gh-btns-star

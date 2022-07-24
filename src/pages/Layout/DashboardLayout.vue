@@ -11,9 +11,13 @@
         <md-icon>dashboard</md-icon>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/user">
+      <sidebar-link to="/create-widget">
         <md-icon>person</md-icon>
-        <p>User Profile</p>
+        <p>Create Widget</p>
+      </sidebar-link>
+      <sidebar-link to="/widgets">
+        <md-icon>person</md-icon>
+        <p>All Widgets</p>
       </sidebar-link>
       <sidebar-link to="/table">
         <md-icon>content_paste</md-icon>
