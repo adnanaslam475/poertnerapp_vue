@@ -2,9 +2,9 @@
     <div>
         <div class="services_parent">
             <!-- <h2>Our Services</h2> -->
-            <div class="text-center py-3">
+            <!-- <div class="text-center py-3">
                 <img src="../../../assets/logo.png" width="300px" height="auto" alt="">
-            </div>
+            </div> -->
             <section class="services">
                 <div class="text-center py-3">
                 <img src="../../../assets/home/Dotted Map DuoTone.png" width="600px" height="auto" alt="">
