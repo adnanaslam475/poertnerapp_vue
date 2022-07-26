@@ -29,3 +29,14 @@ export default {
   font-family: "Montserrat", sans-serif !important;
 }
 </style>
+
+
+ <!-- Change the home page header image to a slider like on https://agronational.mv/en
+
+- replace the homepage gallery with Instagram photos, but show like grid css
+
+- and add a clickable map to home like on https://agronational.mv/en
+It will be a bit different in our map, we just need to display the airport names
+and it should be clickble to each airport so that it redirects to another page
+
+- display leadership page images correctly -->

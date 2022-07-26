@@ -340,6 +340,7 @@ const navigation = [
   { name: 'Partners', href: '#' },
   { name: 'News', href: '#' },
 ]
+
 const offices = [
   { id: 1, city: 'Los Angeles', address: ['4556 Brendan Ferry', 'Los Angeles, CA 90210'] },
   { id: 2, city: 'New York', address: ['886 Walter Streets', 'New York, NY 12345'] },

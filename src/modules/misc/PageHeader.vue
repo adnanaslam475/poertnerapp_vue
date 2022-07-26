@@ -1,33 +1,45 @@
 <template>
     <div class="container-fluid p-0">
 
-        <header class="header">
+        <header class="header" >
             <!-- Background image -->
             <div class="text-center bg-image"
                 :style="{ 'background-image': `url(${image})` }" 
                 style="display: relative; height: 300px; background-size: cover;
       ">
-      <!-- ../../assets/ourStory/our_story1.jpg -->
-                <div class="mask pt-5">
+                <!-- <div class="mask pt-5">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <div class="text-white headings">
                             <h1 class="mb-3 heading">{{ heading }}</h1>
                             <h4 class="mb-3 sub_heading">{{ sub_heading }}</h4>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+                <carousel>
+  <slide>
+    Slide 1 Content
+  </slide>
+  <slide>
+    Slide 2 Content
+  </slide>
+</carousel>
             </div>
             <!-- Background image -->
+            
         </header>
     </div>
-
-
-
 </template>
 
 <script>
+  import { Carousel, Slide } from 'vue-carousel';
+
     export default {
         name: "CardImage",
+        components: {
+    Carousel,
+    Slide
+  },
         props: {
             image: {
                 type: String,
